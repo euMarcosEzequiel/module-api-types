@@ -1,7 +1,7 @@
 BUILD_DIR="dist"
 BRANCH="build"
 
-git checkout $BRANCH
+git checkout -b $BRANCH
 
 tsc || { echo "Erro na compilação"; exit 1; }
 
@@ -15,7 +15,7 @@ git add .
 
 git commit -m "deploy build"
 
-git push origin $BRANCH
+git push origin $BRANCH --force
 
 git checkout main
 
