@@ -7,6 +7,8 @@ tsc || { echo "Erro na compilação"; exit 1; }
 
 git rm -rf .
 
+cp $BUILD_DIR/* .
+
 #echo "Copiando arquivos do build..."
 #cp -r ../$BUILD_DIR/* .
 
