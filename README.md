@@ -1,4 +1,4 @@
-### Publicação o módulo
+### Publicação do módulo
 > `bash deploy.sh`
 
 ### Instalação do módulo
