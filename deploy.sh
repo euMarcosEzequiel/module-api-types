@@ -1,24 +1,21 @@
-BUILD_DIR="dist"
-BRANCH="build"
-
-git checkout -b $BRANCH
+git checkout -b build
 
 tsc || { echo "Erro na compilação"; exit 1; }
 
-rm -rf !($BUILD_DIR)
+rm -rf !(dist)
 
-cp $BUILD_DIR/* .
+cp dist/* .
 
-rm -rf $BUILD_DIR
+rm -rf dist
 
 git add .
 
 git commit -m "deploy build"
 
-git push origin $BRANCH --force
+git push origin build --force
 
 git checkout main
 
-git branch -D $BRANCH
+git branch -D build
 
 git reset --hard
