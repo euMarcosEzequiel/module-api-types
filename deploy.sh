@@ -2,6 +2,8 @@ git checkout -b build
 
 tsc || { echo "Erro na compilação"; exit 1; }
 
+cp package.json dist/
+
 shopt -s extglob
 
 rm -rf !(dist)
