@@ -1,7 +1,7 @@
 BUILD_DIR="dist"
 BRANCH="build"
 
-git checkout -d $BRANCH
+git checkout -b $BRANCH
 
 tsc || { echo "Erro na compilação"; exit 1; }
 
