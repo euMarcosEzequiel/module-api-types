@@ -4,5 +4,5 @@ export abstract class RequestBase {
   @ApiProperty()
   page: number;
   @ApiProperty()
-  pageLenght: number
+  pageLength: number
 }
